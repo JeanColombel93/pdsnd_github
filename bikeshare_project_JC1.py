@@ -3,10 +3,14 @@ import pandas as pd
 import numpy as np
 import calendar
 
+# Given datasets by Udacity, feel free to add more city files if
+# they have the same format.
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York': 'new_york_city.csv',
               'Washington': 'washington.csv' }
 
+# Get the user Inputs
+# Outputs are city, month and day.
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
