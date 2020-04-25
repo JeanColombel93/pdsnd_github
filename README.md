@@ -14,9 +14,9 @@ The script lets the user decide which dataset he wishes to analyse. It then asks
 After calculation, it displays a list of statistics and gives the user the choice to display the actual dataset or to quit the program.
 
 Inputs:
-(str) city - name of the city to analyze
-(str) month - name of the month to filter by, or "all" to apply no month filter
-(str) day - name of the day of week to filter by, or "all" to apply no day filter
+city - name of the city to analyze
+month - name of the month to filter by, or "all" to apply no month filter
+day - name of the day of week to filter by, or "all" to apply no day filter
 
 ### Files used
 bikeshare_project_JC1.py
