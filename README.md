@@ -1,15 +1,29 @@
 ### Date created
-Include the date you created this project and README file.
+25-Apr-2020
 
 ### Project Title
-Replace the Project Title
+Bike-share Project
 
 ### Description
-Describe what your project is about and what it does
+This project was carried out in the context of a data science course on Udacity.
+
+3 bikeshare related datasets are provided (from chicago, new york and washington).
+
+The script lets the user decide which dataset he wishes to analyse. It then asks the user to filter the data out by month and/or by day if he desires.
+
+After calculation, it displays a list of statistics and gives the user the choice to display the actual dataset or to quit the program.
+
+Inputs:
+(str) city - name of the city to analyze
+(str) month - name of the month to filter by, or "all" to apply no month filter
+(str) day - name of the day of week to filter by, or "all" to apply no day filter
 
 ### Files used
-Include the files used
+bikeshare_project_JC1.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Jean Colombel
+Udacity.com
