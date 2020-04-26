@@ -28,7 +28,8 @@ def get_filters():
             print("\nIt seems that you entered a wrong city name...")
 
     print("")
-    # get user inputer for filter (month, day, both or none)
+
+    # get user input for filter (month, day, both or none)
     bad_input = True
     while bad_input:
         filter = input("Would you like to filter the data by month, day, both or not at all?\
@@ -39,6 +40,7 @@ def get_filters():
             print("\nIt seems that you entered an invalid filter variable name...")
 
     print("")
+
     # get user input for month (all, january, february, ... , june)
     # get user input for day of week (all, monday, tuesday, ... sunday)
     if filter == 'month':
@@ -255,8 +257,8 @@ def raw_data_display(city):
                 print("")
                 for i in range(5):
                     print(raw_data.readline())
-                read_decision = input("Would you like to see more rows? yes or no.\n")
-                if read_decision.lower() != "yes":
+                read_decision = input("Would you like to see more rows? yes or no.\n").lower()
+                if read_decision != "yes":
                     read = False
 
 def main():
@@ -270,8 +272,8 @@ def main():
         user_stats(df)
         raw_data_display(city)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+        if restart != 'yes':
             break
 
 if __name__ == "__main__":
