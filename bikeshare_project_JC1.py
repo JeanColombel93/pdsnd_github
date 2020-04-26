@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-import calendar
+import calendar as cal
 
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York': 'new_york_city.csv',
@@ -67,7 +67,7 @@ def get_filters():
         bad_input = True
         while bad_input:
             month = input("Which month? January, February, March, April, May or June?\n").title()
-            if month in list(calendar.month_name)[1:7]:
+            if month in list(cal.month_name)[1:7]:
                 bad_input = False
             else:
                 print("\nPlease enter a valid month")
@@ -92,7 +92,7 @@ def get_filters():
         print("You chose to explore the following month: \033[1m{}\033[0m".format(month))
         time.sleep(1.5)
     if filter == 'day' or filter == 'both':
-        print("You chose to explore the following day: \033[1m{}\033[0m".format(list(calendar.day_name)[int(day)]))
+        print("You chose to explore the following day: \033[1m{}\033[0m".format(list(cal.day_name)[int(day)]))
         time.sleep(1.5)
 
     print('-'*40)
@@ -125,7 +125,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = list(calendar.month_name[1:7])
+        months = list(cal.month_name[1:7])
         month = months.index(month)
 
         # filter by month to create the new dataframe
@@ -147,12 +147,12 @@ def time_stats(df, month, day):
     # display the most common month
     if month == "all":
         most_common_month = df['month'].value_counts().index[0]
-        print('Most common month: \033[1m{}\033[0m'.format(list(calendar.month_name)[most_common_month]))
+        print('Most common month: \033[1m{}\033[0m'.format(list(cal.month_name)[most_common_month]))
 
     # display the most common day of week
     if day == "all":
         most_common_day = df['day_of_week'].value_counts().index[0]
-        print('Most common day: \033[1m{}\033[0m'.format(list(calendar.day_name)[most_common_day]))
+        print('Most common day: \033[1m{}\033[0m'.format(list(cal.day_name)[most_common_day]))
 
     # display the most common start hour
     most_common_hour = df['Start Time'].dt.hour.value_counts().index[0]
